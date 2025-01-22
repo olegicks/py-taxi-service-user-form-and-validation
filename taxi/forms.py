@@ -22,7 +22,7 @@ class DriverLicenseCreateForm(forms.ModelForm):
             raise forms.ValidationError("Error")
         if not license_number[:3].isupper():
             raise forms.ValidationError("Error")
-        if not license_number[5:].isdigit():
+        if not license_number[3:].isdigit():
             raise forms.ValidationError("Invalid license number")
         return license_number
 
